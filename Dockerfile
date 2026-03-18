@@ -1,5 +1,8 @@
 # Χρησιμοποιούμε GCC
-FROM gcc:12.2
+FROM alpine
+
+# Εγκαθιστούμε τον gcc και τις βιβλιοθήκες
+RUN apk add gcc make git linux-headers musl-dev
 
 # Δημιουργούμε έναν φάκελο εργασίας
 WORKDIR /mysrc
