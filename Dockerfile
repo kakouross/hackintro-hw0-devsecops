@@ -5,10 +5,10 @@ FROM gcc:12.2
 WORKDIR /mysrc
 
 # Αντιγράφουμε το αρχείο C
-COPY dna.c .
+COPY newton.c .
 
 # Κάνουμε compile το πρόγραμμα
-RUN gcc -o dna dna.c
+RUN gcc -o newton newton.c
 
 # Εντολή εκτέλεσης
-CMD ["./dna"]
+CMD ["./newton"]
